@@ -34,7 +34,7 @@ const variantStyles: { [key in TabVariant]: string } = {
 export interface TabListProps extends React.HTMLAttributes<HTMLDivElement> {
   color?: Color;
   variant?: TabVariant;
-  children: React.ReactElement[] | React.ReactElement;
+  children: React.ReactElement<any>[] | React.ReactElement<any>;
 }
 
 const TabList = React.forwardRef<HTMLDivElement, TabListProps>((props, ref) => {

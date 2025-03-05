@@ -25,12 +25,12 @@ describe("BarChart", () => {
       { name: "B", value: 20 },
       { name: "C", value: 30 },
     ];
-    const ref = React.useRef<HTMLDivElement>() as React.MutableRefObject<HTMLDivElement>;
+    const ref = React.useRef<HTMLDivElement>(undefined) as React.MutableRefObject<HTMLDivElement>;
     render(<BarChart data={data} categories={["A", "B", "C"]} index="name" ref={ref} />);
   });
 
   it("renders the chart with no data", () => {
-    const ref = React.useRef<HTMLDivElement>() as React.MutableRefObject<HTMLDivElement>;
+    const ref = React.useRef<HTMLDivElement>(undefined) as React.MutableRefObject<HTMLDivElement>;
     const { getByText } = render(<BarChart data={[]} categories={[]} index="name" ref={ref} />);
     expect(getByText("No data")).toBeDefined();
   });

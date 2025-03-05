@@ -9,7 +9,7 @@ export interface TabGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   defaultIndex?: number;
   index?: number;
   onIndexChange?: (index: number) => void;
-  children: React.ReactElement[] | React.ReactElement;
+  children: React.ReactElement<any>[] | React.ReactElement<any>;
 }
 
 const TabGroup = React.forwardRef<HTMLDivElement, TabGroupProps>((props, ref) => {

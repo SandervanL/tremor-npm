@@ -20,7 +20,7 @@ describe("AreaChart", () => {
     jest.restoreAllMocks();
   });
   it("renders the chart with data", () => {
-    const ref = React.useRef<HTMLDivElement>() as React.MutableRefObject<HTMLDivElement>;
+    const ref = React.useRef<HTMLDivElement>(undefined) as React.MutableRefObject<HTMLDivElement>;
     const data = [
       { name: "A", value: 10 },
       { name: "B", value: 20 },
@@ -33,7 +33,7 @@ describe("AreaChart", () => {
   });
 
   it("renders the chart without gradient", () => {
-    const ref = React.useRef<HTMLDivElement>() as React.MutableRefObject<HTMLDivElement>;
+    const ref = React.useRef<HTMLDivElement>(undefined) as React.MutableRefObject<HTMLDivElement>;
     const data = [
       { name: "A", value: 10 },
       { name: "B", value: 20 },
@@ -52,7 +52,7 @@ describe("AreaChart", () => {
   });
 
   it("renders the chart with custom colors", () => {
-    const ref = React.useRef<HTMLDivElement>() as React.MutableRefObject<HTMLDivElement>;
+    const ref = React.useRef<HTMLDivElement>(undefined) as React.MutableRefObject<HTMLDivElement>;
     const data = [
       { name: "A", value: 10 },
       { name: "B", value: 20 },
@@ -71,7 +71,7 @@ describe("AreaChart", () => {
   });
 
   it("renders the chart with custom curve type", () => {
-    const ref = React.useRef<HTMLDivElement>() as React.MutableRefObject<HTMLDivElement>;
+    const ref = React.useRef<HTMLDivElement>(undefined) as React.MutableRefObject<HTMLDivElement>;
     const data = [
       { name: "A", value: 10 },
       { name: "B", value: 20 },

@@ -36,7 +36,7 @@ export interface DatePickerProps
   enableYearNavigation?: boolean;
   weekStartsOn?: 0 | 1 | 2 | 3 | 4 | 5 | 6;
   disabledDates?: Date[];
-  children?: React.ReactElement[] | React.ReactElement;
+  children?: React.ReactElement<any>[] | React.ReactElement<any>;
 }
 
 const DatePicker = React.forwardRef<HTMLDivElement, DatePickerProps>((props, ref) => {

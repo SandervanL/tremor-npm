@@ -59,7 +59,7 @@ export interface DateRangePickerProps
   enableYearNavigation?: boolean;
   weekStartsOn?: 0 | 1 | 2 | 3 | 4 | 5 | 6;
   disabledDates?: Date[];
-  children?: React.ReactElement[] | React.ReactElement;
+  children?: React.ReactElement<any>[] | React.ReactElement<any>;
 }
 
 const DateRangePicker = React.forwardRef<HTMLDivElement, DateRangePickerProps>((props, ref) => {
@@ -103,7 +103,7 @@ const DateRangePicker = React.forwardRef<HTMLDivElement, DateRangePickerProps>((
 
     if (children) {
       React.Children.forEach(
-        children as ReactElement[],
+        children as ReactElement<any>[],
         (child: React.ReactElement<DateRangePickerItemProps>) => {
           selectValues.set(child.props.value, {
             text: (getNodeText(child) ?? child.props.value) as string,

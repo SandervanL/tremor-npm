@@ -8,7 +8,7 @@ import { makeClassName, tremorTwMerge } from "lib";
 const makeAccordionListClassName = makeClassName("AccordionList");
 
 export interface AccordionListProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactElement[] | React.ReactElement;
+  children: React.ReactElement<any>[] | React.ReactElement<any>;
 }
 
 const AccordionList = React.forwardRef<HTMLDivElement, AccordionListProps>((props, ref) => {
